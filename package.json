@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "nodemonServer": "nodemon ./server.js"
+    "dev": "nodemon ./server.js"
   },
   "keywords": [],
   "author": "",
