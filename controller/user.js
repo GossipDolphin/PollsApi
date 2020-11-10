@@ -41,7 +41,7 @@ export const remove = catchAsyncErrors(async (req, res, next) => {
 });
 
 export const login = catchAsyncErrors(async (req, res, next) =>{
-  const user = await userServices.findOneUser(req.body); //skjekker om bruker eksi
+  const user = await userService.findOneUser(req.body); //skjekker om bruker eksi
   if(!user){ // hvis vi ikke får tilake bruker
       return next( // bruker next for at errorHandler skal ta seg av den
           // lager ny error med melding og kode
