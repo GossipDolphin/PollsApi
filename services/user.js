@@ -17,3 +17,5 @@ export const removeuser = async (id) => {
   const user = await user.findById(id);
   user.remove();
 }
+
+export const login = async (data) => User.findOne({email: data.email, password: data.password}); // finne en bruker (returnerer ett objekt)
