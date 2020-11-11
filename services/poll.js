@@ -1,5 +1,7 @@
 import Poll from "../models/poll.js";
 
+export const getPollById = async (id) => Poll.findById(id);
+
 export const listPolls = async () => Poll.find();
 
 export const createPoll = async (data) => Poll.create(data);
@@ -17,3 +19,4 @@ export const removePoll = async (id) => {
 }
 
 export const getPollByName = async (name) => Poll.findOne({'pollName':name});
+
