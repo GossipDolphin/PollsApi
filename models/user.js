@@ -18,6 +18,8 @@ const UserSchema = new Schema({
   },
 });
 
+
+
 UserSchema.virtual('polls', {
     ref: 'Poll',
     localField: '_id',

@@ -3,7 +3,8 @@ import catchAsyncErrors from "../middleware/catchAsync.js";
 import ErrorHandler from "../util/errorHandler.js";
 
 export const get = catchAsyncErrors(async (req, res, next) => {
-  const event = await pollService.getPollById(req.params.id);
+  console.log(req.params.id);
+  const event = await pollService.getPollByName(req.params.id);
   if (!event) {
     return next(
       new ErrorHandler(`Finner ikke event med ${req.params.id}`, 404)
